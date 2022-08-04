@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Notes App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full grid grid-rows-[auto_1fr]"> 
+
+    <nav class="p-5 px-[5%] flex justify-center items-center gap-5">
+        <a href="./index.html" class="text-2xl font-medium text-gray-600 ">Sticky Notes</a>
+        <button class="bg-emerald-400 text-white p-2 px-4 rounded-full shadow-xl shadow-emerald-500 ">Create &#9735;</button>
+    </nav>
+
+    <section class="p-5 px-[5%] grid grid-cols-[auto_1fr] gap-5">
+        <form id="createNote" class="flex flex-col gap-3 border self-start p-5 rounded-md shadow-lg py-8">
+            <h1 class="text-xl font-medium text-gray-500">Create a sticky note</h1>
+            <input type="text" name="title" placeholder="Enter title" class="border p-2 rounded-md outline-none focus:border-emerald-500">
+            <textarea name="description" cols="30" rows="3" placeholder="Enter description" class="border p-2 rounded-md outline-none focus:border-emerald-500"></textarea>
+            <button class="bg-emerald-400 text-white p-2 rounded-md shadow-xl shadow-emerald-500">Create note</button>
+        </form>
+
+       <div id="notes" class="border-l grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-5 p-5">
+       </div>
+    </section>
+    <!-- Script below -->
+    <script src="./app.js"></script>
+</body>
+</html>
+
